@@ -1,10 +1,10 @@
-This deck uses the Wanikani method and data for the kanji and kanji-related Vocabulary from the Genki I 3rd Edition Book.
+This deck uses the WaniKani method and data for the kanji and kanji-related Vocabulary from the Genki I 3rd Edition Book.
 
-The vocabulary-decks use sound files from Wanikani.
+The vocabulary-decks use sound files from WaniKani.
 
 Each Lesson has 5 decks:
 <ul>
-    <li>0 Radicals: Radicals are the components of kanji and should be learned first. (Or ignored if you don't like leaning Radicals)</li>
+    <li>0 Radicals: Radicals are the components of kanji and should be learned first. (Or ignored if you don't like learning Radicals)</li>
     <li>1 Kanjis: These are the kanjis in the order Genki wants you to learn them.</li>
     <li>2 Vocabulary: This deck contains all the vocabulary that is listed with the kanji and marked as important and some more I deemed important.</li>
     <li>3 Additional Vocabulary: This deck contains all the vocabulary from Wanikani that uses kanjis from this and previous lessons, but is not mentioned with the kanji in Genki.</li>
@@ -13,7 +13,7 @@ Each Lesson has 5 decks:
 
 I recommend learning 0, 1 and 2 (and 3 if you have time).
 
-This deck was generated via python. Contributions welcome.
+This deck was generated via Python. Contributions welcome.
 
 Github link: <a href="https://github.com/mi-ael/genkikani" rel="nofollow">https://github.com/mi-ael/genkikani</a>
 
