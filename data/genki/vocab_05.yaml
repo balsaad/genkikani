@@ -6,7 +6,7 @@
   kana: やまかわさん
   meaning: Mr./Ms. Yamakawa
   important: true
-- kanji: ふじ山
+- kanji: 富士山
   kana: ふじさん
   meaning: Mt. Fuji
   important: false
@@ -15,7 +15,6 @@
   kana: かわ
   meaning: river
   important: true
-# Yamakawa omitted
 - kanji: 小川さん
   kana: おがわさん
   meaning: Mr./Ms. Ogawa
@@ -23,7 +22,7 @@
 
 - kanji: 元気
   kana: げんき
-  meaning: fine
+  meaning: healthy, fine
   important: true
 - kanji: 天気
   kana: てんき
@@ -42,7 +41,6 @@
   meaning: popularity
   important: false
 
-# weather ommited
 - kanji: 天国
   kana: てんごく
   meaning: heaven
@@ -200,5 +198,3 @@
   kana: いんしゅうんてん
   meaning: drunken driving
   important: false
-
-
