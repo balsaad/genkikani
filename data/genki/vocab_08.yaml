@@ -1,4 +1,7 @@
-# omitted office worker
+- kanji: 会社員
+  kana: かいしゃいん
+  meaning: office worker
+  important: true
 - kanji: 店員
   kana: てんいん
   meaning: store clerk
@@ -14,7 +17,7 @@
 
 - kanji: 新しい
   kana: あたらしい
-  meaning: Bullet Train
+  meaning: new
   important: true
 - kanji: 新聞
   kana: しんぶん
@@ -33,7 +36,6 @@
   kana: きく
   meaning: to listen
   important: true
-# newspaper
 - kanji: 聞こえる
   kana: きこえる
   meaning: can be heard
@@ -43,7 +45,10 @@
   kana: つくる
   meaning: to make
   important: true
-# composition omitted
+- kanji: 作文
+  kana: さくぶん
+  meaning: composition
+  important: false
 - kanji: 作品
   kana: さくひん
   meaning: artistic piece
@@ -66,7 +71,6 @@
   meaning: to serve; to work under
   important: false
 
-# job omitted
 - kanji: 事
   kana: こと
   meaning: thing
@@ -109,7 +113,6 @@
   kana: くるま
   meaning: car
   important: true
-# train omitted
 - kanji: 自転車
   kana: じてんしゃ
   meaning: bicycle
