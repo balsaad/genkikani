@@ -289,7 +289,7 @@ for r in flat_radicals:
             print(f'\nError retrieving {data['slug']} {_id} image file "{image_url}".')
             print(f'{r}')
         else:
-            print(f'\nSuccess retrieving {data['slug']} {_id} image file "{image_url}".')
+            #print(f'\nSuccess retrieving {data['slug']} {_id} image file "{image_url}".')
         # Image file needs SVG extension to display in Anki.
         #image_filename = f'{image_filename}.svg'
         image_filename = f'{data['slug']}.svg'
