@@ -26,7 +26,7 @@
 - kanji: 西口
   kana: にしぐち
   meaning: west exit
-  important: false
+  important: true
 - kanji: 北西
   kana: ほくせい
   meaning: northwest
@@ -82,7 +82,6 @@
   meaning: Hokkaido
   important: false
 
-# north exit ommited
 - kanji: 口
   kana: くち
   meaning: mouth
@@ -159,9 +158,6 @@
   meaning: left-handed
   important: false
 
-# added for completeness
-- kanji: 分
-  important: false
 - kanji: 五分
   kana: ごふん
   meaning: five minutes
@@ -238,7 +234,6 @@
   kana: だいがく
   meaning: university
   important: true
-# student ommited
 - kanji: 学校
   kana: がっこう
   meaning: school
@@ -269,8 +264,10 @@
   meaning: overseas
   important: false
 
-# foreign country ommited
-# china ommited
+- kanji: 中国
+  kana: ちゅうごく
+  meaning: China
+  important: true
 - kanji: 国
   kana: くに
   meaning: country
