@@ -120,11 +120,6 @@
   meaning: labor
   important: false
 
-# 連れる added
-- kanji: 連れる
-  kana: つれる
-  meaning: to take along
-  important: false
 - kanji: 連れて帰る
   kana: つれてかえる
   meaning: to bring (a person) back
@@ -140,7 +135,7 @@
 
 - kanji: 別れる
   kana: わかれる
-  meaning: to seperate
+  meaning: to separate
   important: true
 - kanji: 別に
   kana: べつに
@@ -159,10 +154,9 @@
   meaning: separately
   important: false
 
-# generalisation
-- kanji: 〜度
-  kana: ど
-  meaning: degrees; times
+- kanji: 一度
+  kana: いちど
+  meaning: once
   important: true
 - kanji: 今度
   kana: こんど
