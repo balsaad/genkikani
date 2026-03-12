@@ -27,7 +27,6 @@
   kana: ほん
   meaning: book
   important: true
-# japan ommited
 - kanji: 日本語
   kana: にほんご
   meaning: Japanese language
@@ -41,14 +40,6 @@
   kana: にほんじん
   meaning: Japanese people
   important: true
-# added for completeness
-- kanji: 人
-  important: false
-# added for completeness
-- kanji: 〜人
-  important: false
-- kanji: 一人
-  important: false
 - kanji: 一人で
   kana: ひとりで
   meaning: alone
@@ -122,7 +113,7 @@
   important: false
 - kanji: 水着
   kana: みずぎ
-  meaning: bathing suit
+  meaning: swimwear
   important: false
 
 - kanji: 木曜日
@@ -161,7 +152,7 @@
   important: true
 - kanji: 土
   kana: つち
-  meaning: Soil
+  meaning: soil
   important: false
 - kanji: 土地
   kana: とち
@@ -172,10 +163,6 @@
   meaning: clay
   important: false
 
-- kanji: 日曜日
-  kana: にちようび
-  meaning: Sunday
-  important: true
 - kanji: 曜日
   kana: ようび
   meaning: day of the week
@@ -232,14 +219,13 @@
   meaning: all year around
   important: false
 
-- kanji: 半
-  important: true
-- kanji: 二時半
+- kanji: 三時半
+  kana: さんじはん
+  meaning: 3:30
   important: true
 - kanji: 半分
   kana: はんぶん
   meaning: half
-  important: false
 - kanji: 半年
   kana: はんとし
   meaning: half a year
