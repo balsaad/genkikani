@@ -6,10 +6,7 @@
   kana: ひがしぐち
   meaning: east exit
   important: true
-- kanji: 東京
-  kana: とうきょう
-  meaning: Tokyo
-  important: false
+# Omitted Tokyo since it is included in lesson 7.
 - kanji: 関東
   kana: かんとう
   meaning: Kanto area
