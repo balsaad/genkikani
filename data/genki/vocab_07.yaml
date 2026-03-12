@@ -1,4 +1,7 @@
-# tokyo ommitted
+- kanji: 東京
+  kana: とうきょう
+  meaning: Tokyo
+  important: true
 - kanji: 京子
   kana: きょうこ
   meaning: Kyoko
@@ -6,7 +9,7 @@
 - kanji: 京都
   kana: きょうと
   meaning: Kyoto
-  important: true
+  important: false
 - kanji: 上京する
   kana: じょうきょうする
   meaning: to go to the capital
@@ -18,9 +21,7 @@
   important: true
   wanikani_kanji: 子供
   note: 子ども is usually written with the first part kanji and the second part hiragana.
-
-# girl
-# boy
+# Girl and boy in previous lessons.
 - kanji: 女子学生
   kana: じょしがくせい
   meaning: female student
@@ -39,7 +40,7 @@
   meaning: elementary school student
   important: false
 
-- kanji: 合う
+- kanji: 会う
   kana: あう
   meaning: to meet
   important: true
@@ -51,6 +52,15 @@
   kana: かいしゃいん
   meaning: office worker
   important: false
+- kanji: 会議
+  kana: かいぎ
+  meaning: meeting
+  important: false
+- kanji: 教会
+  kana: きょうかい
+  meaning: church
+  important: false
+
 - kanji: 神社
   kana: じんじゃ
   meaning: shrine
