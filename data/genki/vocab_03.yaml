@@ -2,10 +2,6 @@
   kana: いち
   meaning: one
   important: true
-- kanji: 一時
-  kana: いちじ
-  meaning: one o'clock
-  important: true
 - kanji: 一年生
   kana: いちねんせい
   meaning: first-year student
@@ -48,10 +44,7 @@
   kana: さんじ
   meaning: three o'clock
   important: true
-- kanji: 三年生
-  kana: さんねんせい
-  meaning: third-year student
-  important: false
+# Omit third-year student since it is in lesson 10.
 - kanji: 三月
   kana: さんがつ
   meaning: March
@@ -315,18 +308,12 @@
   kana: いちじ
   meaning: one o'clock
   important: true
-- kanji: 時間
-  kana: じかん
-  meaning: time; ... hours
-  important: false
+# Omit じかんsince it is in lesson 9.
 - kanji: 子どもの時
   kana: こどものとき
   meaning: in one's childhood
   important: false
-- kanji: 時々
-  kana: ときどき
-  meaning: sometimes
-  important: false
+# Omit sometimes since it is in lesson 12.
 - kanji: 時計
   kana: とけい
   meaning: watch; clock

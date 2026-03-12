@@ -96,10 +96,7 @@
   kana: でんき
   meaning: electricity; light
   important: true
-- kanji: 電話
-  kana: でんわ
-  meaning: telephone
-  important: false
+# Omit telephone since it is in lesson 9.
 - kanji: 電池
   kana: でんち
   meaning: battery
@@ -113,10 +110,7 @@
   kana: くるま
   meaning: car
   important: true
-- kanji: 自転車
-  kana: じてんしゃ
-  meaning: bicycle
-  important: false
+# Omit bicycle since it is in lesson 10.
 - kanji: 車いす
   kana: くるまいす
   meaning: wheelchair

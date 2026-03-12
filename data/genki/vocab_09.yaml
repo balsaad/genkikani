@@ -10,10 +10,7 @@
   kana: ごぜんちゅう
   meaning: in the morning
   important: true
-- kanji: 正午
-  kana: しょうご
-  meaning: noon
-  important: false
+# Omit noon since it is in lesson 10.
 
 - kanji: 〜の後
   kana: 〜のあと
@@ -45,10 +42,7 @@
   meaning: advance sale
   important: false
 
-- kanji: 有名
-  kana: ゆうめい
-  meaning: famous
-  important: false
+# Omit famous since it is in lesson 11.
 - kanji: 名称
   kana: めいし
   meaning: name card
@@ -89,7 +83,7 @@
   important: false
 - kanji: 梅雨
   kana: つゆ
-  meaning: rainy seasoon
+  meaning: rainy season
   important: false
 - kanji: 大雨
   kana: おおあめ

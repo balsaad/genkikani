@@ -155,10 +155,6 @@
   kana: うた
   meaning: song
   important: true
-- kanji: 歌手
-  kana: かしゅ
-  meaning: singer
-  important: true
 - kanji: 国歌
   kana: こっか
   meaning: national anthem
@@ -197,10 +193,6 @@
 - kanji: いろいろな所
   kana: いろいろなところ
   meaning: various places
-  important: true
-- kanji: 近所
-  kana: きんじょ
-  meaning: neighborhood
   important: true
 - kanji: 台所
   kana: だいどころ

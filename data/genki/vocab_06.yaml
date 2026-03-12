@@ -74,10 +74,7 @@
   kana: ほっきょく
   meaning: North Pole
   important: false
-- kanji: 北海道
-  kana: こっかいどう
-  meaning: Hokkaido
-  important: false
+# Omit Hokkaido since it is in lesson 10.
 
 - kanji: 口
   kana: くち
@@ -87,10 +84,7 @@
   kana: じんこう
   meaning: population
   important: false
-- kanji: 入り口
-  kana: いりぐち
-  meaning: entrance
-  important: false
+# Omit entrance since it is in lesson 7.
 
 - kanji: 出る
   kana: でる
@@ -163,10 +157,7 @@
   kana: じゅっぷん
   meaning: ten minutes
   important: true
-- kanji: 自分
-  kana: じぶん
-  meaning: oneself
-  important: false
+# Omit oneself since it is in lesson 10.
 - kanji: 分ける
   kana: わける
   meaning: to divide
@@ -231,10 +222,7 @@
   kana: だいがく
   meaning: university
   important: true
-- kanji: 学校
-  kana: がっこう
-  meaning: school
-  important: false
+# Omit school since it is in lesson 7.
 - kanji: 学ぶ
   kana: まなび
   meaning: to study

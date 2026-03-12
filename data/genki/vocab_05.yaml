@@ -28,14 +28,8 @@
   kana: てんき
   meaning: weather
   important: true
-- kanji: 電気
-  kana: でんき
-  meaning: electricity
-  important: false
-- kanji: 気持ち
-  kana: きもち
-  meaning: feeling
-  important: false
+# Omit electricity since it is in lesson 8.
+# Omit feeling since it is in lesson 10.
 - kanji: 人気
   kana: にんき
   meaning: popularity
@@ -79,10 +73,7 @@
   kana: こんげつ
   meaning: this month
   important: false
-- kanji: 今年
-  kana: ことし
-  meaning: this year
-  important: false
+# Omit this year since it is in lesson 10.
 
 - kanji: 田中さん
   kana: たなかさん
@@ -160,10 +151,7 @@
   kana: いちぎょうめ
   meaning: first line
   important: false
-- kanji: 旅行
-  kana: りょこう
-  meaning: travel
-  important: false
+# Omit travel since it is in lesson 11.
 
 - kanji: 食べる
   kana: たべる
@@ -177,14 +165,8 @@
   kana: しょくどう
   meaning: cafeteria
   important: false
-- kanji: 食事
-  kana: しょくじ
-  meaning: meal
-  important: false
-- kanji: 朝食
-  kana: ちょうしょく
-  meaning: breakfast
-  important: false
+# Omit meal since it is in lesson 8.
+# Omit breakfast since it is in lesson 10.
 
 - kanji: 飲む
   kana: のむ

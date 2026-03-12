@@ -48,10 +48,7 @@
   kana: かいしゃ
   meaning: company
   important: true
-- kanji: 会社員
-  kana: かいしゃいん
-  meaning: office worker
-  important: false
+# Omit office worker since it is in lesson 8.
 - kanji: 会議
   kana: かいぎ
   meaning: meeting
@@ -61,10 +58,7 @@
   meaning: church
   important: false
 
-- kanji: 神社
-  kana: じんじゃ
-  meaning: shrine
-  important: false
+# Omit shrine since it is in lesson 12.
 - kanji: 社会
   kana: しゃかい
   meaning: society
@@ -128,14 +122,6 @@
 - kanji: 学校
   kana: がっこう
   meaning: school
-  important: true
-- kanji: 高校
-  kana: こうこう
-  meaning: high school
-  important: true
-- kanji: 高校生
-  kana: こうこうせい
-  meaning: high school student
   important: true
 - kanji: 中学校
   kana: ちゅうがっこう

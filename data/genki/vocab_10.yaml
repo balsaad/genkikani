@@ -2,10 +2,7 @@
   kana: すむ
   meaning: to live
   important: true
-- kanji: 住所
-  kana: じゅうしょ
-  meaning: address
-  important: false
+# Omit address since it is in lesson 11.
 - kanji: 移住する
   kana: いじゅうする
   meaning: to immigrate

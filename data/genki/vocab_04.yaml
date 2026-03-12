@@ -6,10 +6,7 @@
   kana: にちようび
   meaning: Sunday
   important: true
-- kanji: 毎日
-  kana: まいにち
-  meaning: every day
-  important: false
+# Omit every day since it is in lesson 7.
 - kanji: 母の日
   kana: ははのひ
   meaning: Mother's Day
@@ -27,6 +24,7 @@
   kana: ほん
   meaning: book
   important: true
+# Omit Japanese language since it is in lesson 7.
 - kanji: 日本語
   kana: にほんご
   meaning: Japanese language
@@ -65,10 +63,7 @@
   kana: つき
   meaning: moon
   important: false
-- kanji: 今月
-  kana: こんげつ
-  meaning: this month
-  important: false
+# Omit this month since it is in lesson 5.
 - kanji: 一か月
   kana: いっかげつ
   meaning: one month
@@ -172,10 +167,7 @@
   kana: うえ
   meaning: top; above
   important: true
-- kanji: 上手
-  kana: じょうず
-  meaning: good at
-  important: false
+# Omit good at since it is in lesson 11.
 - kanji: 屋上
   kana: おくじょう
   meaning: rooftop
@@ -206,10 +198,7 @@
   kana: なか
   meaning: inside
   important: true
-- kanji: 中国
-  kana: ちゅうごく
-  meaning: China
-  important: false
+# Omit China since it is in lesson 6.
 - kanji: 中学
   kana: ちゅうがく
   meaning: junior high school
