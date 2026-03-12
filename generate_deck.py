@@ -24,16 +24,8 @@
 # Add remaining kanji and vocab to a deck.
 # Add KKLC entry number.
 # Add KKLD entry number.
-# Change note type names.
-# Add reverse card type.  Needs to be done in src/anki_exporter.py.
-# Add type answer.  Needs to be done in src/anki_exporter.py.
-# Change sizes, etc. in templates.
 # Add Genki lesson number.
-#   DONE - Populate Anki note field
-#   Add to card template.
 # Add WaniKani level
-#   DONE - Populate Anki note field
-#   Add to card template.
 
 from ruamel.yaml import YAML
 from typing import Any, Dict, List
