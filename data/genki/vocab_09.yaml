@@ -15,7 +15,6 @@
   meaning: noon
   important: false
 
-# P.M omitted
 - kanji: 〜の後
   kana: 〜のあと
   meaning: after ...
@@ -37,17 +36,15 @@
   kana: まえ
   meaning: before; front
   important: true
-# A.M. skipped
 - kanji: 名前
   kana: なまえ
   meaning: name
   important: true
 - kanji: 前売り
   kana: まえうり
-  meaning: advanced scale
+  meaning: advance sale
   important: false
 
-# name skiped
 - kanji: 有名
   kana: ゆうめい
   meaning: famous
@@ -137,11 +134,8 @@
 
 - kanji: 時間
   kana: じかん
-  meaning: time
+  meaning: time; ... hours
   important: true
-# added for completeness
-- kanji: 〜間
-  important: false
 - kanji: 二時間
   kana: にじかん
   meaning: two hours
@@ -160,21 +154,24 @@
   important: false
 
 - kanji: 家
-  kana: いえ／うち
-  meaning: house; home
+  kana: いえ
+  meaning: house
   important: true
 - kanji: 家族
   kana: かぞく
   meaning: family
   important: false
-# house; home omitted
-- kanji: 家内
-  kana: かない
-  meaning: my wife
-  important: false
 - kanji: 作家
   kana: さっか
   meaning: author
+  important: false
+- kanji: 家事
+  kana: かじ
+  meaning: housework
+  important: false
+- kanji: 家賃
+  kana: やちん
+  meaning: rent
   important: false
 
 - kanji: 話す
