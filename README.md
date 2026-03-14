@@ -7,8 +7,8 @@ Each Lesson has 5 decks:
     <li>0 Radicals: Radicals are the components of kanji and should be learned first. (Or ignored if you don't like learning Radicals)</li>
     <li>1 Kanjis: These are the kanjis in the order Genki wants you to learn them.</li>
     <li>2 Vocabulary: This deck contains all the vocabulary that is listed with the kanji and Genki marks as important and some more I deemed important.</li>
-    <li>3 Additional Vocabulary: This deck contains all the vocabulary from WaniKani that uses kanjis from this and previous lessons, but is not mentioned with the kanji in Genki.</li>
-    <li>4 Unimportant Vocabulary: This deck contains all the vocabulary that Genki does not mark as important. Removed words with kanji that appear in later lessons. (May need additional pruning.)</li>
+    <li>3 Unimportant Vocabulary: This deck contains all the vocabulary that Genki does not mark as important. Removed words with kanji that appear in later lessons. (May need additional pruning.)</li>
+    <li>4 Additional Vocabulary: This deck contains all the vocabulary from WaniKani that uses kanjis from this and previous lessons, but is not mentioned by Genki.</li>
 </ul>
 
 The WaniKani level decks contain the radicals, kanji, vocabulary, and kana vocabulary not already covered in the Genki lesson decks.
