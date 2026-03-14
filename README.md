@@ -17,6 +17,13 @@ I recommend learning 0, 1 and 2 (and 3 if you have time).
 
 This deck was generated via Python. Contributions welcome.
 
+Data dependencies:
+    www.wanikani.com/
+    github.com/davidluzgouveia/kanji-data
+    docs.google.com/spreadsheets/d/1fAK9jbcAreu3bX8E0TewlcOK9vHkP4YgdZMPERLzT_k/edit?usp=sharing
+    docs.google.com/spreadsheets/d/10PjyOwxqVPAodCfzaVIEz3Hqgz526CNd48nTDiN6eQ0/edit?usp=sharing
+
+
 Github link: <a href="https://github.com/mi-ael/genkikani" rel="nofollow">https://github.com/mi-ael/genkikani</a>
 
 Screenshots:
