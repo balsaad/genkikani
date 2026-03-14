@@ -10,13 +10,28 @@
 #   Add hidden items into a seperate deck.
 #   As of 2026-02-27 radicals and vocabulary have hidden items.
 # Kanji Kentei (Kanken) level
+#   https://www.kanken.or.jp/kanken/grades/overview/
 #   https://github.com/onlyskin/kanjiapi.dev
-# Option to choose male or female voice
+# Option to choose male or female voice.
+# Investigate handling wanikani_kanji.
 
 # Done
 # Add JLPT level (N5 - N1).
 # Add grade level (1-10).  See https://www.edrdg.org/wiki/KANJIDIC_Project.html
-#   for grade level definition.
+# The "grade" of the kanji.
+# - G1 to G6 indicates the grade level as specified by the Japanese Ministry of
+# Education for kanji that are to be taught in elementary school (1026 Kanji).
+# These are sometimes called the kyōiku (education) kanji and are part of the set
+# of jōyō (daily use) kanji;
+# - G8 indicates the remaining jōyō kanji that are to be taught in secondary school
+# (additional 1,110 Kanji). Note that 1,106 of the G8 kanji are in the KANJIDIC file,
+# a further two are in the KANJD212 file and the remaining two are only in the
+# KANJIDIC2 XML file;
+# - G9 and G10 indicate jinmeiyō ("for use in names") kanji which in addition to the
+# jōyō kanji are approved for use in family name registers and other official
+# documents. G9 (649 kanji, of which 640 are in KANJIDIC) indicates the kanji is a
+# "regular" name kanji, and G10 (212 kanji of which 130 are in KANJIDIC) indicates
+# the kanji is a variant of a jōyō kanji.
 # Add stroke counts
 # Add frequency.
 # Kana vocab - Genki data does not include kana vocab, so easiest to add kana vocab
