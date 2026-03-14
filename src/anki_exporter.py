@@ -620,46 +620,45 @@ def export_to_anki(decks: List, images: List):
             vocab_deck_important = gen_vocab_deck(lection['vocabulary_important'], f'{deck_name}::{lection["name"]}::2 Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 2, sound_files)
             anki_decks.append(vocab_deck_important)
 
-        # vocabulary WaniKani
-        if 'vocabulary_wanikani' in lection:
-            vocab_deck_additional = gen_vocab_deck(lection['vocabulary_wanikani'], f'{deck_name}::{lection["name"]}::3 Additional Vocabulary (WK)', anki_model_vocabulary, start_uuid + i*10 + 3, sound_files)
-            anki_decks.append(vocab_deck_additional)
-
         # vocabulary unimportant
         if 'vocabulary_unimportant' in lection:
-            vocab_deck_unimportant = gen_vocab_deck(lection['vocabulary_unimportant'], f'{deck_name}::{lection["name"]}::4 Unimportant Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 4, sound_files)
+            vocab_deck_unimportant = gen_vocab_deck(lection['vocabulary_unimportant'], f'{deck_name}::{lection["name"]}::3 Unimportant Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 3, sound_files)
             anki_decks.append(vocab_deck_unimportant)
 
+        # vocabulary WaniKani
+        if 'vocabulary_wanikani' in lection:
+            vocab_deck_additional = gen_vocab_deck(lection['vocabulary_wanikani'], f'{deck_name}::{lection["name"]}::4 Additional Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 4, sound_files)
+            anki_decks.append(vocab_deck_additional)
+
+        # These below will be in WK level decks.
         # Remaining WK vocabulary
         if 'vocabulary' in lection:
-            vocab_deck = gen_vocab_deck(lection['vocabulary'], f'{deck_name}::{lection["name"]}::5 Remaining WK Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 5, sound_files)
+            vocab_deck = gen_vocab_deck(lection['vocabulary'], f'{deck_name}::{lection["name"]}::2 Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 2, sound_files)
             anki_decks.append(vocab_deck)
 
         # WK kana vocabulary
         if 'kana_vocabulary' in lection:
-            kana_vocab_deck = gen_kana_vocab_deck(lection['kana_vocabulary'], f'{deck_name}::{lection["name"]}::6 Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 6, sound_files)
+            kana_vocab_deck = gen_kana_vocab_deck(lection['kana_vocabulary'], f'{deck_name}::{lection["name"]}::3 Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 3, sound_files)
             anki_decks.append(kana_vocab_deck)
 
         # hidden radicals
         if 'radicals_hidden' in lection:
-            radical_hidden_deck = gen_radical_deck(lection['radicals_hidden'], f'{deck_name}::{lection["name"]}::7 Hidden Radicals', anki_model_radicals, start_uuid + i*10 + 7)
+            radical_hidden_deck = gen_radical_deck(lection['radicals_hidden'], f'{deck_name}::{lection["name"]}::4 Hidden Radicals', anki_model_radicals, start_uuid + i*10 + 4)
             anki_decks.append(radical_hidden_deck)
 
         # hidden kanjis
         if 'kanjis_hidden' in lection:
-            kanji_hidden_deck = gen_kanji_deck(lection['kanjis_hidden'], f'{deck_name}::{lection["name"]}::8 Hidden Kanji', anki_model_kanjis, start_uuid + i*10 + 8)
+            kanji_hidden_deck = gen_kanji_deck(lection['kanjis_hidden'], f'{deck_name}::{lection["name"]}::5 Hidden Kanji', anki_model_kanjis, start_uuid + i*10 + 5)
             anki_decks.append(kanji_hidden_deck)
 
         # hidden vocabulary
         if 'vocabulary_hidden' in lection:
-            vocabulary_hidden_deck = gen_vocab_deck(lection['vocabulary_hidden'], f'{deck_name}::{lection["name"]}::9 Hidden Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 9, sound_files)
+            vocabulary_hidden_deck = gen_vocab_deck(lection['vocabulary_hidden'], f'{deck_name}::{lection["name"]}::6 Hidden Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 6, sound_files)
             anki_decks.append(vocabulary_hidden_deck)
 
         # hidden kana vocabulary
-        # As of 2026-02-27, there are no hidden kana vocabulary.
         if 'kana_vocabulary_hidden' in lection:
-            # 200,000 should be enough to avoid number collision.
-            kana_vocabulary_hidden_deck = gen_vocab_deck(lection['kana_vocabulary_hidden'], f'{deck_name}::{lection["name"]}::10 Hidden Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + 200000 + i*10, sound_files)
+            kana_vocabulary_hidden_deck = gen_vocab_deck(lection['kana_vocabulary_hidden'], f'{deck_name}::{lection["name"]}::7 Hidden Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 7, sound_files)
             anki_decks.append(kana_vocabulary_hidden_deck)
 
     anki_package = genanki.Package(anki_decks)
