@@ -2,5 +2,10 @@
 venv
 key
 data/wanikani
-wanigenki.apkg
-src/__pycache__/anki_exporter.cpython-39.pyc
+src/__pycache__
+#src/genanki
+*+
+*~
+*.apkg
+google_doc_credentials.json
+wanikani_api_key.txt
