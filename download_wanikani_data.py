@@ -4,6 +4,7 @@
 # Add auxiliary meanings?
 # Write out primary meanings and readings.
 # amalgamations?
+# Options to download kana vocab, vocab, kanji, radicals.
 
 # DONE
 # Added updated date.
@@ -70,7 +71,7 @@ os.makedirs('data/wanikani/images', exist_ok=True)
 kana_vocabulary = client.subjects(types="kana_vocabulary", fetch_all=True)
 flat_kana_vocab = get_entries_from_data(kana_vocabulary)
 del kana_vocabulary
-with open(f'data/wanikani/raw_kana_vocabulary', 'w', encoding='utf-8') as f:
+with open(f'data/wanikani/raw_kana_vocabulary.json', 'w', encoding='utf-8') as f:
     print(*map(str, flat_kana_vocab), sep='\n\n', file=f)
 
 num_kana_vocab = len(flat_kana_vocab)
@@ -137,7 +138,7 @@ vocabulary = client.subjects(types="vocabulary", fetch_all=True)
 flat_vocab = get_entries_from_data(vocabulary)
 del vocabulary
 #print(f'{flat_vocab}')
-with open(f'data/wanikani/raw_vocabulary', 'w', encoding='utf-8') as f:
+with open(f'data/wanikani/raw_vocabulary.json', 'w', encoding='utf-8') as f:
     print(*map(str, flat_vocab), sep='\n\n', file=f)
 
 num_vocab = len(flat_vocab)
@@ -208,7 +209,7 @@ kanjis = client.subjects(types="kanji", fetch_all=True)
 #kanjis = client.subjects(types="kanji")
 flat_kanjis = get_entries_from_data(kanjis)
 del kanjis
-with open(f'data/wanikani/raw_kanji', 'w', encoding='utf-8') as f:
+with open(f'data/wanikani/raw_kanji.json', 'w', encoding='utf-8') as f:
     print(*map(str, flat_kanjis), sep='\n\n', file=f)
 num_kanjis = len(flat_kanjis)
 #in_dict = kanjis.current_page._raw
@@ -266,7 +267,7 @@ radicals = client.subjects(types="radical", fetch_all=True)
 #radicals = client.subjects(types="radical")
 flat_radicals = get_entries_from_data(radicals)
 del radicals
-with open(f'data/wanikani/raw_radicals', 'w', encoding='utf-8') as f:
+with open(f'data/wanikani/raw_radicals.json', 'w', encoding='utf-8') as f:
     print(*map(str, flat_radicals), sep='\n\n', file=f)
 num_radicals = len(flat_radicals)
 #in_dict = radicals.current_page._raw
@@ -279,6 +280,7 @@ for r in flat_radicals:
     meanings = [m['meaning'] for m in data['meanings']]
     meaning_mnemonic = data['meaning_mnemonic']
     image_filename = None
+    # WK provides an image for radical without a character.
     if word is None:
         # WK API only delivers image/svg+xml.
         #image_url = [e['url'] for e in data['character_images'] if e['content_type'] == 'image/svg+xml' and e['metadata']['dimensions'] == '1024x1024'][0]
@@ -290,6 +292,7 @@ for r in flat_radicals:
             print(f'{r}')
         else:
             #print(f'\nSuccess retrieving {data['slug']} {_id} image file "{image_url}".')
+            pass
         # Image file needs SVG extension to display in Anki.
         #image_filename = f'{image_filename}.svg'
         image_filename = f'{data['slug']}.svg'
