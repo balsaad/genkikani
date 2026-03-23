@@ -148,7 +148,7 @@ def main():# Define the scope
     ]
 
     # Add your service account JSON key file name here
-    creds = ServiceAccountCredentials.from_json_keyfile_name('genkikani-f83049e05c40.json', scope)
+    creds = ServiceAccountCredentials.from_json_keyfile_name('google_doc_credentials.json', scope)
     client = gspread.authorize(creds)
 
     # Open the Google Sheet by title or URL
