@@ -19,10 +19,10 @@ This deck was generated via Python. Contributions welcome.
 
 Data sources:
 <ul>
-    <li><a href="www.wanikani.com" rel="nofollow">www.wanikani.com</a></li>
-    <li><a href="github.com/davidluzgouveia/kanji-data" rel="nofollow">github.com/davidluzgouveia/kanji-data</a>: Kanji information, such as strokes, grade level, JLPT level, etc.</li>
-    <li><a href="docs.google.com/spreadsheets/d/1fAK9jbcAreu3bX8E0TewlcOK9vHkP4YgdZMPERLzT_k" rel="nofollow">docs.google.com/spreadsheets/d/1fAK9jbcAreu3bX8E0TewlcOK9vHkP4YgdZMPERLzT_k</a>: KKLC and KKLD kanji information</li>
-    <li><a href="docs.google.com/spreadsheets/d/10PjyOwxqVPAodCfzaVIEz3Hqgz526CNd48nTDiN6eQ0" rel="nofollow">docs.google.com/spreadsheets/d/10PjyOwxqVPAodCfzaVIEz3Hqgz526CNd48nTDiN6eQ0</a>: Kanji frequency data</li>
+    <li><a href="https://www.wanikani.com" rel="nofollow">www.wanikani.com</a></li>
+    <li><a href="https://github.com/davidluzgouveia/kanji-data" rel="nofollow">github.com/davidluzgouveia/kanji-data</a>: Kanji information, such as strokes, grade level, JLPT level, etc.</li>
+    <li><a href="https://docs.google.com/spreadsheets/d/1fAK9jbcAreu3bX8E0TewlcOK9vHkP4YgdZMPERLzT_k" rel="nofollow">docs.google.com/spreadsheets/d/1fAK9jbcAreu3bX8E0TewlcOK9vHkP4YgdZMPERLzT_k</a>: KKLC and KKLD kanji information</li>
+    <li><a href="https://docs.google.com/spreadsheets/d/10PjyOwxqVPAodCfzaVIEz3Hqgz526CNd48nTDiN6eQ0" rel="nofollow">docs.google.com/spreadsheets/d/10PjyOwxqVPAodCfzaVIEz3Hqgz526CNd48nTDiN6eQ0</a>: Kanji frequency data</li>
 </ul>
 
 
