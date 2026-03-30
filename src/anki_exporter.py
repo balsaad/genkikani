@@ -373,7 +373,7 @@ class GenkiNoteKanaVocab(genanki.Note):
     def guid(self):
         return genanki.guid_for(self.fields[7]) # uid
 
-def gen_vocab_deck(deck, deckpath: str, model: genanki.Model, uuid:int, sounds:List[str]) -> genanki.Deck:
+def gen_vocab_deck(deck, deckpath: str, model: genanki.Model, uuid:int, sounds:List[str], tags=[]) -> genanki.Deck:
     full_name = f'{deckpath}'
     anki_deck = genanki.Deck(uuid, full_name)
     for c in deck:
@@ -395,15 +395,15 @@ def gen_vocab_deck(deck, deckpath: str, model: genanki.Model, uuid:int, sounds:L
                 f'{full_name}::{", ".join(c["meanings"])}',
                 c['genki_lesson_num'],
                 c['wanikani_level'],
-                #c['Tags'],
             ],
+            tags=tags
         )
         if c['sound'] != '':
             sounds.append(c['sound'])
         anki_deck.add_note(note)
     return anki_deck
 
-def gen_kana_vocab_deck(deck, deckpath: str, model: genanki.Model, uuid:int, sounds:List[str]) -> genanki.Deck:
+def gen_kana_vocab_deck(deck, deckpath: str, model: genanki.Model, uuid:int, sounds:List[str], tags=[]) -> genanki.Deck:
     full_name = f'{deckpath}'
     anki_deck = genanki.Deck(uuid, full_name)
     for c in deck:
@@ -420,15 +420,15 @@ def gen_kana_vocab_deck(deck, deckpath: str, model: genanki.Model, uuid:int, sou
                 f'{full_name}::{", ".join(c["meanings"])}',
                 c['genki_lesson_num'],
                 c['wanikani_level'],
-                #c['Tags'],
             ],
+            tags=tags
         )
         if c['sound'] != '':
             sounds.append(c['sound'])
         anki_deck.add_note(note)
     return anki_deck
 
-def gen_kanji_deck(deck, deckpath: str, model: genanki.Model, uuid:int) -> genanki.Deck:
+def gen_kanji_deck(deck, deckpath: str, model: genanki.Model, uuid:int, tags=[]) -> genanki.Deck:
     full_name = f'{deckpath}'
     anki_deck = genanki.Deck(uuid, full_name)
     for c in deck:
@@ -457,13 +457,13 @@ def gen_kanji_deck(deck, deckpath: str, model: genanki.Model, uuid:int) -> genan
                 c['grade'],
                 c['jlpt'],
                 c['KKLD_SKIP_code'],
-                #c['Tags'],
             ],
+            tags=tags
         )
         anki_deck.add_note(note)
     return anki_deck
 
-def gen_radical_deck(deck, deckpath: str, model: genanki.Model, uuid:int) -> genanki.Deck:
+def gen_radical_deck(deck, deckpath: str, model: genanki.Model, uuid:int, tags=[]) -> genanki.Deck:
     full_name = f'{deckpath}'
     anki_deck = genanki.Deck(uuid, full_name)
     for c in deck:
@@ -476,8 +476,8 @@ def gen_radical_deck(deck, deckpath: str, model: genanki.Model, uuid:int) -> gen
                 c['meaning_mnemonic'],
                 f'{full_name}::{", ".join(c["meanings"])}',
                 c['wanikani_level'],
-                #c['Tags'],
             ],
+            tags=tags
         )
         anki_deck.add_note(note)
     return anki_deck
@@ -493,7 +493,6 @@ def export_to_anki(decks: List, images: List):
             {'name': 'meaning_mnemonic'},
             {'name': 'uuid'},
             {'name': 'wanikani_level'},
-            #{'name': 'Tags'},
         ],
         templates=[{
             'name': 'Recognition',
@@ -528,7 +527,6 @@ def export_to_anki(decks: List, images: List):
                 {'name': 'grade'},
                 {'name': 'jlpt'},
                 {'name': 'KKLD_SKIP_code'},
-                #{'name': 'Tags'},
             ],
         templates=[{
             'name': 'Recognition',
@@ -556,7 +554,6 @@ def export_to_anki(decks: List, images: List):
             {'name': 'uuid'},
             {'name': 'genki_lesson_num'},
             {'name': 'wanikani_level'},
-            #{'name': 'Tags'},
         ],
         templates=[
             {
@@ -586,7 +583,6 @@ def export_to_anki(decks: List, images: List):
             {'name': 'uuid'},
             {'name': 'genki_lesson_num'},
             {'name': 'wanikani_level'},
-            #{'name': 'Tags'},
         ],
         templates=[
             {
@@ -607,27 +603,27 @@ def export_to_anki(decks: List, images: List):
 
         # radicals
         if 'radicals' in lection:
-            radical_deck = gen_radical_deck(lection['radicals'], f'{deck_name}::{lection["name"]}::0 Radicals', anki_model_radicals, start_uuid + i*10)
+            radical_deck = gen_radical_deck(lection['radicals'], f'{deck_name}::{lection["name"]}::0 Radicals', anki_model_radicals, start_uuid + i*10, ["rad_tag", "ddd"])
             anki_decks.append(radical_deck)
 
         # kanjis
         if 'kanjis' in lection:
-            kanji_deck = gen_kanji_deck(lection['kanjis'], f'{deck_name}::{lection["name"]}::1 Kanji', anki_model_kanjis, start_uuid + i*10 + 1)
+            kanji_deck = gen_kanji_deck(lection['kanjis'], f'{deck_name}::{lection["name"]}::1 Kanji', anki_model_kanjis, start_uuid + i*10 + 1, ["kan_tag", "abc"])
             anki_decks.append(kanji_deck)
 
         # vocabulary important
         if 'vocabulary_important' in lection:
-            vocab_deck_important = gen_vocab_deck(lection['vocabulary_important'], f'{deck_name}::{lection["name"]}::2 Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 2, sound_files)
+            vocab_deck_important = gen_vocab_deck(lection['vocabulary_important'], f'{deck_name}::{lection["name"]}::2 Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 2, sound_files, ["v_tag", "a", "b"])
             anki_decks.append(vocab_deck_important)
 
         # vocabulary unimportant
         if 'vocabulary_unimportant' in lection:
-            vocab_deck_unimportant = gen_vocab_deck(lection['vocabulary_unimportant'], f'{deck_name}::{lection["name"]}::3 Unimportant Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 3, sound_files)
+            vocab_deck_unimportant = gen_vocab_deck(lection['vocabulary_unimportant'], f'{deck_name}::{lection["name"]}::3 Unimportant Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 3, sound_files, ["vu_tag", "a", "b"])
             anki_decks.append(vocab_deck_unimportant)
 
         # vocabulary WaniKani
         if 'vocabulary_wanikani' in lection:
-            vocab_deck_additional = gen_vocab_deck(lection['vocabulary_wanikani'], f'{deck_name}::{lection["name"]}::4 Additional Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 4, sound_files)
+            vocab_deck_additional = gen_vocab_deck(lection['vocabulary_wanikani'], f'{deck_name}::{lection["name"]}::4 Additional Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 4, sound_files, ["wkv", "1", "2", "3"])
             anki_decks.append(vocab_deck_additional)
 
         # These below will be in WK level decks.
@@ -638,27 +634,27 @@ def export_to_anki(decks: List, images: List):
 
         # WK kana vocabulary
         if 'kana_vocabulary' in lection:
-            kana_vocab_deck = gen_kana_vocab_deck(lection['kana_vocabulary'], f'{deck_name}::{lection["name"]}::3 Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 3, sound_files)
+            kana_vocab_deck = gen_kana_vocab_deck(lection['kana_vocabulary'], f'{deck_name}::{lection["name"]}::3 Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 3, sound_files, ["kv", "2", "1"])
             anki_decks.append(kana_vocab_deck)
 
         # hidden radicals
         if 'radicals_hidden' in lection:
-            radical_hidden_deck = gen_radical_deck(lection['radicals_hidden'], f'{deck_name}::{lection["name"]}::4 Hidden Radicals', anki_model_radicals, start_uuid + i*10 + 4)
+            radical_hidden_deck = gen_radical_deck(lection['radicals_hidden'], f'{deck_name}::{lection["name"]}::4 Hidden Radicals', anki_model_radicals, start_uuid + i*10 + 4, ["h", "r"])
             anki_decks.append(radical_hidden_deck)
 
         # hidden kanjis
         if 'kanjis_hidden' in lection:
-            kanji_hidden_deck = gen_kanji_deck(lection['kanjis_hidden'], f'{deck_name}::{lection["name"]}::5 Hidden Kanji', anki_model_kanjis, start_uuid + i*10 + 5)
+            kanji_hidden_deck = gen_kanji_deck(lection['kanjis_hidden'], f'{deck_name}::{lection["name"]}::5 Hidden Kanji', anki_model_kanjis, start_uuid + i*10 + 5, ["h", "k"])
             anki_decks.append(kanji_hidden_deck)
 
         # hidden vocabulary
         if 'vocabulary_hidden' in lection:
-            vocabulary_hidden_deck = gen_vocab_deck(lection['vocabulary_hidden'], f'{deck_name}::{lection["name"]}::6 Hidden Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 6, sound_files)
+            vocabulary_hidden_deck = gen_vocab_deck(lection['vocabulary_hidden'], f'{deck_name}::{lection["name"]}::6 Hidden Vocabulary', anki_model_vocabulary, start_uuid + i*10 + 6, sound_files, ["h", "v"])
             anki_decks.append(vocabulary_hidden_deck)
 
         # hidden kana vocabulary
         if 'kana_vocabulary_hidden' in lection:
-            kana_vocabulary_hidden_deck = gen_vocab_deck(lection['kana_vocabulary_hidden'], f'{deck_name}::{lection["name"]}::7 Hidden Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 7, sound_files)
+            kana_vocabulary_hidden_deck = gen_vocab_deck(lection['kana_vocabulary_hidden'], f'{deck_name}::{lection["name"]}::7 Hidden Kana Vocabulary', anki_model_kana_vocabulary, start_uuid + i*10 + 7, sound_files, ["h", "k", "v"])
             anki_decks.append(kana_vocabulary_hidden_deck)
 
     anki_package = genanki.Package(anki_decks)
