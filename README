@@ -17,7 +17,6 @@ src/genanki is my fork of kerrickstaley/genanki.
 
 data/kanji.json - https://github.com/davidluzgouveia/kanji-data
 
-
 Some radicals created to be same as kanji because WK does not have way to
 use kanji as component for other kanji.  This fake radical then used as
 component for other kanji. Ex. 売 sell -> 読 read
