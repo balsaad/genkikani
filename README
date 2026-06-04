@@ -1,0 +1,131 @@
+python -m venv --system-site-packages ~/venv/anki
+source ~/venv/anki/bin/activate
+pip install wanikani_api
+pip install chevron
+pip install gspread
+...
+deactivate
+
+#pip ... --user #--break-system-packages
+#wanikani_api
+
+Changed wanikani_api: https://github.com/Kaniwani/wanikani_api/pull/669
+    To support kana-only vocabulary
+
+src/genanki is my fork of kerrickstaley/genanki.
+    Only change as of 2026-03-30 is using cached_properties from functools.
+
+data/kanji.json - https://github.com/davidluzgouveia/kanji-data
+
+
+Some radicals created to be same as kanji because WK does not have way to
+use kanji as component for other kanji.  This fake radical then used as
+component for other kanji. Ex. 売 sell -> 読 read
+
+DONE: Add Genki lesson number, KKLC entry number, KKLD v2 entry number
+
+genanki
+
+python -X utf8 download_wanikani_data.py 6287ae50-788b-40f1-8619-37ea07be5e4d
+
+    vocab: 6695 / 6695
+    kanji: 2092 / 2092
+    radicals: 502 / 502
+    Updated 2026-02-12T21:26:04.397306Z.
+
+python -X utf8 generate_deck.py
+
+    145 kanji in Genki 1.
+
+radical
+    amalgamation_subject_ids - numeric ids for the kanji that have the radical
+
+kanji
+    amalgamation_subject_ids - numeric ids for the vocabulary that have the kanji
+    component_subject_ids - numeric ids for the radicals that make up this kanji
+
+vocab
+    component_subject_ids - numeric ids for the kanji that make up this vocab
+
+vocab
+{
+    'id': 2467,
+    'object': 'vocabulary',
+    'url': 'https://api.wanikani.com/v2/subjects/2467',
+    'data_updated_at': '2025-06-11T05:31:59.714858Z',
+    'data': {
+        'created_at': '2012-02-28T08:04:47.000000Z',
+        'level': 1,
+        'slug': '一',
+        'hidden_at': None,
+        'document_url': 'https://www.wanikani.com/vocabulary/%E4%B8%80',
+        'characters': '一',
+        'meanings': [{'meaning': 'One', 'primary': True, 'accepted_answer': True}],
+        'auxiliary_meanings': [{'meaning': '1', 'type': 'whitelist'}],
+        'readings': [{'reading': 'いち', 'primary': True, 'accepted_answer': True}],
+        'parts_of_speech': ['numeral'],
+        'component_subject_ids': [440],
+        'meaning_mnemonic': 'As is the case with most vocab words that consist of a single kanji, this vocab word has the same meaning as the kanji it parallels, which is <vocabulary>one</vocabulary>.', 'reading_mnemonic': "When a vocab is a single kanji and all alone like this, it's usually going to use the kun'yomi. Numbers are an exception, however. When a number is all alone, with no kanji or okurigana, it is going to be the on'yomi reading, which you learned with the kanji.  Just remember this exception for alone numbers and you'll be able to read future number-related vocab to come.", 'context_sentences': [{'en': "This lemon weighs a kilogram!? That's big!", 'ja': 'このレモン、一キログラム ！？大きいですね！'}, {'en': "It's level 1.", 'ja': 'レベル一です。'}, {'en': 'This is the largest size melon in the United States.', 'ja': 'このメロンはアメリカ一の大きさです。'}],
+        'pronunciation_audios': [{'url': 'https://files.wanikani.com/r8jqaotmr178the7vwce82usz0ur', 'metadata': {'gender': 'male', 'source_id': 2711, 'pronunciation': 'いち', 'voice_actor_id': 2, 'voice_actor_name': 'Kenichi', 'voice_description': 'Tokyo accent'}, 'content_type': 'audio/webm'}, {'url': 'https://files.wanikani.com/06lywgs66k3b4koa26wciqv8hs0q', 'metadata': {'gender': 'female', 'source_id': 21630, 'pronunciation': 'いち', 'voice_actor_id': 1, 'voice_actor_name': 'Kyoko', 'voice_description': 'Tokyo accent'}, 'content_type': 'audio/webm'}, {'url': 'https://files.wanikani.com/tsvpbht2ud58xv88dxn8cjys0hvl', 'metadata': {'gender': 'female', 'source_id': 21630, 'pronunciation': 'いち', 'voice_actor_id': 1, 'voice_actor_name': 'Kyoko', 'voice_description': 'Tokyo accent'}, 'content_type': 'audio/mpeg'}, {'url': 'https://files.wanikani.com/b92ilgjvk9lo3ygwoapde9u7tmg6', 'metadata': {'gender': 'male', 'source_id': 2711, 'pronunciation': 'いち', 'voice_actor_id': 2, 'voice_actor_name': 'Kenichi', 'voice_description': 'Tokyo accent'}, 'content_type': 'audio/mpeg'}],
+        'lesson_position': 43,
+        'spaced_repetition_system_id': 2
+    }
+}
+
+kanji
+{
+    'id': 440,
+    'object': 'kanji',
+    'url': 'https://api.wanikani.com/v2/subjects/440',
+    'data_updated_at': '2026-02-02T21:19:27.542970Z',
+    'data': {
+        'created_at': '2012-02-27T19:55:19.000000Z',
+        'level': 1,
+        'slug': '一',
+        'hidden_at': None,
+        'document_url': 'https://www.wanikani.com/kanji/%E4%B8%80',
+        'characters': '一',
+        'meanings': [{'meaning': 'One', 'primary': True, 'accepted_answer': True}],
+        'auxiliary_meanings': [{'meaning': '1', 'type': 'whitelist'}],
+        'readings': [{'reading': 'いち', 'primary': True, 'accepted_answer': True, 'type': 'onyomi'}, {'reading': 'いつ', 'primary': False, 'accepted_answer': True, 'type': 'onyomi'}, {'reading': 'ひと', 'primary': False, 'accepted_answer': False, 'type': 'kunyomi'}, {'reading': 'かず', 'primary': False, 'accepted_answer': False, 'type': 'nanori'}],
+        'component_subject_ids': [1],
+        'amalgamation_subject_ids': [2467, 2468, 2477, 2510, 2544, 2588, 2627, 2660, 2665, 2672, 2679, 2721, 2730, 2751, 2959, 3048, 3256, 3335, 3348, 3349, 3372, 3481, 3527, 3528, 3656, 3663, 4133, 4173, 4258, 4282, 4563, 4615, 4701, 4823, 4906, 5050, 5224, 5237, 5349, 5362, 5838, 6010, 6029, 6150, 6169, 6209, 6210, 6346, 6584, 6614, 6723, 6811, 6851, 7037, 7293, 7305, 7451, 7561, 7617, 7734, 7780, 7927, 8209, 8214, 8414, 8456, 8583, 8709, 8896, 8921, 9056, 9103, 9166, 9268, 9286, 9305, 9306, 9331],
+        'visually_similar_subject_ids': [],
+        'meaning_mnemonic': "Lying on the <radical>ground</radical> is something that looks just like the ground, the number <kanji>One</kanji>. Why is this One lying down? It's been shot by the number two. It's lying there, bleeding out and dying. The number One doesn't have long to live.",
+        'meaning_hint': 'To remember the meaning of <kanji>One</kanji>, imagine yourself there at the scene of the crime. You grab <kanji>One</kanji> in your arms, trying to prop it up, trying to hear its last words. Instead, it just splatters some blood on your face. "Who did this to you?" you ask. The number One points weakly, and you see number Two running off into an alleyway. He\'s always been jealous of number One and knows he can be number one now that he\'s taken the real number one out.',
+        'reading_mnemonic': "As you're sitting there next to <kanji>One</kanji>, holding him up, you start feeling a weird sensation all over your skin. From the wound comes a fine powder (obviously coming from the special bullet used to kill One) that causes the person it touches to get extremely <reading>itchy</reading> (いち).",
+        'reading_hint': "Make sure you feel the ridiculously <reading>itchy</reading> sensation covering your body. It climbs from your hands, where you're holding the number <kanji>One</kanji> up, and then goes through your arms, crawls up your neck, goes down your body, and then covers everything. It becomes uncontrollable, and you're scratching everywhere, writhing on the ground. It's so itchy that it's the most painful thing you've ever experienced (you should imagine this vividly, so you remember the reading of this kanji).",
+        'lesson_position': 25, 'spaced_repetition_system_id': 2
+    }
+}
+
+radical
+{
+    'id': 1,
+    'object': 'radical',
+    'url': 'https://api.wanikani.com/v2/subjects/1',
+    'data_updated_at': '2026-01-13T07:59:15.567121Z',
+    'data': {
+        'created_at': '2012-02-27T18:08:16.000000Z',
+        'level': 1,
+        'slug': 'ground',
+        'hidden_at': None,
+        'document_url': 'https://www.wanikani.com/radicals/ground',
+        'characters': '一',
+        'character_images': [
+            {'url': 'https://files.wanikani.com/wahfwljxcm2sxrvl4ehldujuh65v',
+                'metadata': {'inline_styles': True},
+                'content_type': 'image/svg+xml'},
+            {'url': 'https://files.wanikani.com/4lxmimfbwuvl07s11dq0f9til0mb', 'metadata': {'color': '#000000', 'dimensions': '1024x1024', 'style_name': 'original'}, 'content_type': 'image/png'},
+            {'url': 'https://files.wanikani.com/3n3dlzyjjgou47qb4h4uewghcfcx', 'metadata': {'color': '#000000', 'dimensions': '1024x1024', 'style_name': '1024px'}, 'content_type': 'image/png'},
+            {'url': 'https://files.wanikani.com/9d5fax4vrjp28vms1jb11ouu37vi', 'metadata': {'color': '#000000', 'dimensions': '512x512', 'style_name': '512px'}, 'content_type': 'image/png'},
+            {'url': 'https://files.wanikani.com/gfwzjl41i5v5oiwrsjz5zz957nww', 'metadata': {'color': '#000000', 'dimensions': '256x256', 'style_name': '256px'}, 'content_type': 'image/png'},
+            {'url': 'https://files.wanikani.com/m79ver1yfujpkcfa0bo5tcueuxk3', 'metadata': {'color': '#000000', 'dimensions': '128x128', 'style_name': '128px'}, 'content_type': 'image/png'},
+            {'url': 'https://files.wanikani.com/gcqkjhbw9aguieat8yrqxz09qszn', 'metadata': {'color': '#000000', 'dimensions': '64x64', 'style_name': '64px'}, 'content_type': 'image/png'},
+            {'url': 'https://files.wanikani.com/7czfgjlgsjxx8sndvfkezts6ugj1', 'metadata': {'color': '#000000', 'dimensions': '32x32', 'style_name': '32px'}, 'content_type': 'image/png'}],
+        'meanings': [{'meaning': 'Ground', 'primary': True, 'accepted_answer': True}],
+        'auxiliary_meanings': [],
+        'amalgamation_subject_ids': [440, 449, 450, 451, 468, 488, 531, 533, 568, 590, 609, 633, 635, 709, 710, 724, 783, 808, 885, 913, 932, 965, 971, 1000, 1020, 1085, 1119, 1126, 1137, 1178, 1198, 1241, 1249, 1310, 1326, 1340, 1367, 1372, 1376, 1379, 1428, 1431, 1463, 1491, 1521, 1547, 1559, 1591, 1655, 1769, 1851, 1852, 1855, 1868, 1869, 1888, 2085, 2104, 2128, 2138, 2148, 2171, 2172, 2182, 2212, 2277, 2334, 2375, 2419, 2437],
+        'meaning_mnemonic': "This radical consists of a single, horizontal stroke. What's the biggest, single, horizontal stroke? That's the <radical>ground</radical>. Look at the ground, look at this radical, now look at the ground again. Kind of the same, right?", 'lesson_position': 0, 'spaced_repetition_system_id': 2
+    }
+}
